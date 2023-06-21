@@ -52,14 +52,14 @@ typedef struct liststr
 
 /**
  *struct passinfo - This  contains pseudo-arguements to pass into a function,
- *					allowing uniform prototype for function pointer struct
+ *allowing uniform prototype for function pointer struct
  *@arg: This is a string generated from getline containing arguements
  *@argv: This is an array of strings generated from arg
  *@path: This is a string path for the current command
- *@argc:This is the argument count
+ *@argc: This is the argument count
  *@line_count: This is the error count
  *@err_num: This is the error code for exit()s
- *@linecount_flag: if on count this line of input
+ *@linecount_flag:This checks if on count this line of input
  *@fname: This is the program filename
  *@env: The linked list local copy of environ
  *@environ: This is the custom modified copy of environ from LL env
@@ -102,7 +102,7 @@ typedef struct passinfo
 /**
  *struct builtin - This contains a builtin string and related function
  *@type: This is the builtin command flag
- *@func:This is the function
+ *@func: This is the function
  */
 typedef struct builtin
 {
@@ -230,6 +230,5 @@ int is_chain(info_t *, char *, size_t *);
 void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int replace_vars(info_t *);
-int replace_string(char **, char *); 
-
+int replace_string(char **, char *);
 #endif
