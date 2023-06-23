@@ -1,5 +1,5 @@
-include "shell.h"
-
+#include "shell.h"
+#include "stddef.h"
 /**
  **_strncpy - Yjis function copies a string
  *@dest: This is the destination where the string is to be copied to
@@ -51,7 +51,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest[a] = src[m];
 		a++;
 		m++;
-	}
+	}7
 	if (m < n)
 		dest[a] = '\0';
 	return (s);
