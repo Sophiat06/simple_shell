@@ -135,16 +135,16 @@ int _getline(info_t *info, char **ptr, size_t *length)
 	if (r == -1 || (r == 0 && len == 0))
 		return (-1);
 
-	c = _strchr(buf + a, '\n');
+	c = _strchr(buff + a, '\n');
 	k = c ? 1 + (unsigned int)(c - buff) : len;
 	new_p = _realloc(p, s, s ? s + k : k + 1);
 	if (!new_p) /* MALLOC FAILURE! */
 		return (p ? free(p), -1 : -1);
 
 	if (s)
-		_strncat(new_p, buff + a, k - i);
+		_strncat(new_p, buff + a, k - a);
 	else
-		_strncpy(new_p, buff + a, k - i + 1);
+		_strncpy(new_p, buff + a, k - a + 1);
 
 	s += k - a;
 	a = k;
