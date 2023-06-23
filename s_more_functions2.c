@@ -72,7 +72,7 @@ int print_d(int input, int fd)
 	now = _ban_;
 	for (b = 1000000000; b > 1; b /= 10)
 	{
-		if (_abs_ / b)
+		if (_ban_ / b)
 		{
 			__putchar('0' + now / b);
 			sum_up++;
@@ -112,7 +112,7 @@ char *convert_number(long int num, int base, int flags)
 	*ptr = '\0';
 
 	do	{
-		*--ptr = array[n % base];
+		*--ptr = array[b % base];
 		b /= base;
 	} while (b != 0);
 
