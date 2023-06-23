@@ -158,7 +158,7 @@ void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 
 /* mem_functions2.c */
-iint bfree(void **);
+int bfree(void **);
 
 /* s_more_functions.c */
 int interactive(info_t *);
