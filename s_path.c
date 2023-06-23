@@ -74,7 +74,7 @@ char *find_path(info_t *info, char *pathstr, char *cmd)
 				_strcat(pathway, cmd);
 			}
 			if (is_cmd(info, pathway))
-			7	return (pathway);
+				return (pathway);
 			if (!pathstr[a])
 				break;
 			currentpost = a;
